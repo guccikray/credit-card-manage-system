@@ -55,13 +55,13 @@ public class CreditCardServiceTest {
 
     @BeforeEach
     void init() {
-        user = new User()
+        user = (User) new User()
             .setName("name")
             .setSurname("surname")
             .setEmail("email")
             .setPassword("pass")
-            .setRole(Role.ROLE_USER);
-        user.setId(1L);
+            .setRole(Role.ROLE_USER)
+            .setId(1L);
 
         card = new CreditCard()
             .setCardNumber("XsvSn58Eiy+Pjff2Q6zzmAcLGOLjxhWqsM4TU/x4xH0x3MwSqUNvXtasTMM=")

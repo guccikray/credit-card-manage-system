@@ -59,19 +59,19 @@ public class UserServiceTest {
             .setEmail("email")
             .setPassword("pass");
 
-        editUserForm = new EditUserForm();
-        editUserForm.setName("name");
-        editUserForm.setSurname("surname");
-        editUserForm.setEmail("email");
-        editUserForm.setPassword("pass");
+        editUserForm = (EditUserForm) new EditUserForm()
+            .setName("name")
+            .setSurname("surname")
+            .setEmail("email")
+            .setPassword("pass");
 
-        user = new User()
+        user = (User) new User()
             .setName("name")
             .setSurname("surname")
             .setEmail("email")
             .setPassword("pass")
-            .setRole(Role.ROLE_USER);
-        user.setId(1L);
+            .setRole(Role.ROLE_USER)
+            .setId(1L);
 
         userModel = new UserModel()
             .setUserId(1L)
